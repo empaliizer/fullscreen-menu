@@ -1,0 +1,50 @@
+.menu-button {
+    background-color: $color-light;
+    border: 0; 
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu {
+    position: fixed;
+    background-color: rgba($color-dark, 0.9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    place-items: center;
+    text-align: center;
+    z-index: 998;
+
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &-item {
+            line-height: 1.5;
+            &--current {
+                .menu-link {
+                    color: $color-accent;
+                }
+            }
+        }
+
+        &-link {
+            color: $color-light;
+            font-size: 3rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+                color: $color-accent;
+            }
+        }
+        &--active {
+            display: grid;
+        }
+}
